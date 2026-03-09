@@ -1,0 +1,13 @@
+#!nsh
+#
+# @name My Awesome Boat
+# @type Rover  # 差速船可以继承rover的混控逻辑
+#
+. ${R}etc/init.d/rc.rover_defaults
+
+set AIRFRAME 4001
+
+# 混控器：定义输出通道。假设输出0给左推进器，输出1给右推进器
+set MIXER CUSTOM
+set PWM_OUT 0
+set PWM_OUT 1
