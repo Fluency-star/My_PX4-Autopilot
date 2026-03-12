@@ -1,0 +1,46 @@
+#!/bin/sh
+# @name Differential USV
+# @type Rover
+# @class Rover
+
+. ${R}etc/init.d/rc.rover_differential_defaults
+
+PX4_SIMULATOR=${PX4_SIMULATOR:=gz}
+PX4_GZ_WORLD=${PX4_GZ_WORLD:=usv_world}
+PX4_SIM_MODEL=${PX4_SIM_MODEL:=usv}
+
+param set-default SIM_GZ_EN 1
+
+# Navigation
+param set-default NAV_ACC_RAD 1.0
+
+# Differential parameters
+param set-default RD_WHEEL_TRACK 0.8
+
+# Yaw controller
+param set-default RO_YAW_RATE_P 0.3
+param set-default RO_YAW_RATE_I 0.02
+
+param set-default RO_YAW_P 3
+
+# Speed controller
+param set-default RO_SPEED_P 0.2
+param set-default RO_SPEED_I 0.05
+
+param set-default RO_MAX_THR_SPEED 3
+param set-default RO_SPEED_LIM 2
+
+# Pure pursuit
+param set-default PP_LOOKAHD_GAIN 1
+param set-default PP_LOOKAHD_MAX 8
+param set-default PP_LOOKAHD_MIN 1
+
+# Actuator mapping
+param set-default SIM_GZ_WH_FUNC1 101 # right thruster
+param set-default SIM_GZ_WH_FUNC2 102 # left thruster
+
+param set-default SIM_GZ_WH_MIN1 -100
+param set-default SIM_GZ_WH_MAX1 100
+
+param set-default SIM_GZ_WH_MIN2 -100
+param set-default SIM_GZ_WH_MAX2 100
