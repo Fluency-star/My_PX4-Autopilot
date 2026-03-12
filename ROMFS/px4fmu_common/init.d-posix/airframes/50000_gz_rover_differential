@@ -6,8 +6,8 @@
 . ${R}etc/init.d/rc.rover_differential_defaults
 
 PX4_SIMULATOR=${PX4_SIMULATOR:=gz}
-PX4_GZ_WORLD=${PX4_GZ_WORLD:=wam-v}
-PX4_SIM_MODEL=${PX4_SIM_MODEL:=sydney_regatta}
+PX4_GZ_WORLD=${PX4_GZ_WORLD:=rover}
+PX4_SIM_MODEL=${PX4_SIM_MODEL:=rover_differential}
 
 param set-default SIM_GZ_EN 1 # Gazebo bridge
 

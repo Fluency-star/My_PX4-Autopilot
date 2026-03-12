@@ -6,8 +6,8 @@
 . ${R}etc/init.d/rc.rover_differential_defaults
 
 PX4_SIMULATOR=${PX4_SIMULATOR:=gz}
-PX4_GZ_WORLD=${PX4_GZ_WORLD:=usv_world}
-PX4_SIM_MODEL=${PX4_SIM_MODEL:=usv}
+PX4_GZ_WORLD=${PX4_GZ_WORLD:=sydney_regatta}
+PX4_SIM_MODEL=${PX4_SIM_MODEL:=wam_usv}
 
 param set-default SIM_GZ_EN 1
 
